@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-4">
+      <img src="{{ user.avatar_url }}&s=300" class="rounded-circle">
+    </div>
+    <div class="col-md-8">
+      Username: {{ user.username }} <br>
+      <a href="{% url 'oauth2_provider:list' %}">Third-party apps and services.</a>
+    </div>
+  </div>
+{% endblock content %}
